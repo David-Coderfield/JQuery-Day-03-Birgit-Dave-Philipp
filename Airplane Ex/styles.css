@@ -9,6 +9,7 @@ body
 	font: normal 100%/1.3em sans-serif; 
 	margin: 10px; 
 	color: #333; 
+	background-image: url("aerial-view-1149248_1920.jpg");
 	background-color: #fff;
 }
 
@@ -49,6 +50,7 @@ div#moveme
 	overflow: visible;
 	/*border-radius: 5px;*/
 	/*cursor: default;*/
+	position: fixed;
 }
 
 h1
