@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>basic 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <ul id="list">
+    <li>To Do Task 1</li>
+    <li>To Do Task 2</li>
+    <li>To Do Task 3</li>
+    <li>To Do Task 4</li>
+    <li>To Do Task 5</li>
+  </ul>
+  <br>
+  <input type="text" id="input" placeholder="add a new task"><button id="btn">Add</button>
+  <script>
+  // Start of JQuery Code
+  $("document").ready(function() {
+
+    $("#btn").on("click", function() {
+      var txt = $("#input").val();
+      $("#list").append("<li>" + txt + "</li>")
+      addEvent();
+    })
+
+
+    function addEvent() {
+      $("#list li").click(function() {
+        $(this).animate({
+          opacity: 0,
+          paddingLeft: '+=100'
+        }, 500, function() {
+          $(this).hide();
+        });
+      });
+    }
+    addEvent();
+
+
+
+  });
+  // End of JQuery Code
+  </script>
+</body>
+
+</html>
