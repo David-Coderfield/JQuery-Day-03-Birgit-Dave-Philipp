@@ -1,5 +1,25 @@
 // Start of JQuery Code
+var f;
 $("document").ready(function(){
+
+  var x = 1;
+  $("select").on("change",function(){
+    f = $("option:selected").val();
+    $(".tabletContainer, .lapTopContainer, .cellPhoneContainer").hide();
+    switch(f) {
+      case "all": $(".tabletContainer, .lapTopContainer, .cellPhoneContainer").show();break;
+      case "lapTopContainer": $(".lapTopContainer").show(); break;
+      case "cellPhoneContainer": $(".cellPhoneContainer").show();break;
+      case "tabletContainer": $(".tabletContainer").show();break;
+      default: ;
+    }
+  });
+
+/*      <option value="lapTopContainer">Notebooks</option>
+    <option value="cellPhoneContainer">Phones</option>
+    <option value="tabletContainer">Tablets</option>*/
+
+
 
 	$(".phone").css("background", "green");
 	$(".tablet").css("background", "blue");

@@ -294,3 +294,7 @@ body{
         position: relative
     }
 }
+
+option:first-child {
+    font-weight: bold;
+}
