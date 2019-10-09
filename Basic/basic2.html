@@ -23,9 +23,12 @@
 
     $("#btn").on("click", function() {
       var txt = $("#input").val();
-      $("#list").append("<li>" + txt + "</li>")
+      $("#list").append("<li>" + txt + "</li>");
       addEvent();
+      $("#list li:last-child").hide().fadeIn(500);
     })
+
+    $("#list").hide().fadeIn(500);
 
 
     function addEvent() {
